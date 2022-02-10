@@ -7,6 +7,7 @@ public class Create : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 {
     public GameObject tower;
     public bool flag = true;
+    public static List<Vector2> placeActive = new List<Vector2>();
     public void OnBeginDrag(PointerEventData eventData)
     {
         Instantiate(this.gameObject, transform.position, Quaternion.identity);
@@ -43,7 +44,20 @@ public class Create : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         {
             zcir += 0.5f;
         }
-        Instantiate(tower, /*eventData.pointerCurrentRaycast.worldPosition*/ new Vector3(xcir, pos.y, zcir), Quaternion.identity);
+        foreach(Vector2 i in tower.GetComponent<Tyrel>().coor)
+        {
+            if (placeActive.Contains((new Vector2(xcir, zcir) + i)))
+            {
+                return;
+            }
+        }
+        placeActive.Add(new Vector2(xcir, zcir));
+        foreach (Vector2 i in tower.GetComponent<Tyrel>().coor)
+        {
+            placeActive.Add(new Vector2(xcir, zcir) + i);
+        }
+        placeActive.Add(new Vector2(xcir, zcir));
+        Instantiate(tower, new Vector3(xcir, pos.y, zcir), Quaternion.identity);
         print("Tower is build");
     }
 }
