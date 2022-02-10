@@ -15,7 +15,7 @@ namespace Assets.Scripts
         public Cell _start;
         public Cell _goal;
 
-        public Path_searcher_for_enemy(Battlefield graph, Cell start, Cell goal)
+        /*public Path_searcher_for_enemy(Battlefield graph, Cell start, Cell goal)
         {
             _start = start;
             _goal = goal;
@@ -48,6 +48,6 @@ namespace Assets.Scripts
                     }
                 }
             }
-        }
+        }*/
     }
 }

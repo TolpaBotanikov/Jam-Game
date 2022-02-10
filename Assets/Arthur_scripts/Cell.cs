@@ -100,7 +100,7 @@ public class Cell : MonoBehaviour
     /// <param name="finish">Коонец траектории</param>
     /// <param name="bf">Поле боя</param>
     /// <returns>Список клеток траектории</returns>
-    public static List<Cell> CreateTraectory(Cell start, Cell finish, Battlefield bf)
+    /*public static List<Cell> CreateTraectory(Cell start, Cell finish, Battlefield bf)
     {
         Vector3 startPos = HexToCube(start.position);
         Vector3 finishPos = HexToCube(finish.position);
@@ -143,5 +143,5 @@ public class Cell : MonoBehaviour
         path.Add(start);
         path.Reverse();
         return path;
-    }
+    }*/
 }
