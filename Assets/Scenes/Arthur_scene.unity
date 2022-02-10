@@ -249,7 +249,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+  m_RootOrder: 1
+>>>>>>> parent of 9afef14 (update1)
 =======
   m_RootOrder: 1
 >>>>>>> parent of 9afef14 (update1)
@@ -337,7 +341,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 2
+>>>>>>> parent of 9afef14 (update1)
 =======
   m_RootOrder: 2
 >>>>>>> parent of 9afef14 (update1)
@@ -746,7 +754,11 @@ RectTransform:
   - {fileID: 1239228863}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+  m_RootOrder: 3
+>>>>>>> parent of 9afef14 (update1)
 =======
   m_RootOrder: 3
 >>>>>>> parent of 9afef14 (update1)
@@ -899,6 +911,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6071769417159349066
@@ -975,6 +988,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8c5520bed3216f41a980d9f35d64a14, type: 3}
+=======
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 9afef14 (update1)
 =======
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
