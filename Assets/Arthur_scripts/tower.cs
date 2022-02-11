@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class tower : MonoBehaviour, IDragHandler, IBeginDragHandler
+public class tower : MonoBehaviour
 {
     private GameObject current_enemy;
     public int HP;
@@ -11,24 +11,14 @@ public class tower : MonoBehaviour, IDragHandler, IBeginDragHandler
     public int RELOAD;
     private float last_shoot_time;
     public Transform head;
-    public Vector2[] coor;
 
     private void Update()
-    {
+        {
         if (current_enemy != null)
         {
             Quaternion targetRotation = Quaternion.LookRotation(current_enemy.transform.position - head.transform.position);
             head.transform.rotation = targetRotation;
         }
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        transform.position = eventData.pointerCurrentRaycast.worldPosition;
-    }
-    public void OnDrag(PointerEventData eventData)
-    {
-        transform.position = eventData.pointerCurrentRaycast.worldPosition;
     }
 
     private void OnTriggerStay(Collider other)
