@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Arthur_scene.unity
-    guid: a4249f8d3da0ab74faf05dd400edeef3
+    path: Assets/Menu.unity
+    guid: 38a95d7f5c0d4e34c97ffd8e37416023
+  - enabled: 1
+    path: Assets/MurkaScene.unity
+    guid: a2e973a249e864440b7d0e3815d4b140
   m_configObjects: {}
