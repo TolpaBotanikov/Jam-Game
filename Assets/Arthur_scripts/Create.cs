@@ -44,7 +44,7 @@ public class Create : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         {
             zcir += 0.5f;
         }
-        foreach(Vector2 i in tower.GetComponent<Tyrel>().coor)
+        foreach (Vector2 i in tower.GetComponent<Tyrel>().coor)
         {
             if (placeActive.Contains((new Vector2(xcir, zcir) + i)))
             {

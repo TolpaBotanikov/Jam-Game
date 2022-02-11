@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class tower : MonoBehaviour
+public class tower : MonoBehaviour, IDragHandler, IBeginDragHandler
 {
     private GameObject current_enemy;
     public int HP;
@@ -10,6 +11,7 @@ public class tower : MonoBehaviour
     public int RELOAD;
     private float last_shoot_time;
     public Transform head;
+    public Vector2[] coor;
 
     private void Update()
     {
@@ -19,7 +21,16 @@ public class tower : MonoBehaviour
             head.transform.rotation = targetRotation;
         }
     }
-    
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        transform.position = eventData.pointerCurrentRaycast.worldPosition;
+    }
+    public void OnDrag(PointerEventData eventData)
+    {
+        transform.position = eventData.pointerCurrentRaycast.worldPosition;
+    }
+
     private void OnTriggerStay(Collider other)
     {
         print('1');
