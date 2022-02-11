@@ -15,5 +15,6 @@ public class Path : MonoBehaviour
     void Update()
     {
         gg.SetDestination(target.transform.position);
+        print(target);
     }
 }

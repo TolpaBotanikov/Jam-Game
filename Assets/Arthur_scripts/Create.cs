@@ -51,12 +51,10 @@ public class Create : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
                 return;
             }
         }
-        placeActive.Add(new Vector2(xcir, zcir));
         foreach (Vector2 i in tower.GetComponent<Tyrel>().coor)
         {
             placeActive.Add(new Vector2(xcir, zcir) + i);
         }
-        placeActive.Add(new Vector2(xcir, zcir));
         Instantiate(tower, new Vector3(xcir, pos.y, zcir), Quaternion.identity);
         print("Tower is build");
     }

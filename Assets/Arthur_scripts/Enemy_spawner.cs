@@ -8,6 +8,7 @@ public class Enemy_spawner : MonoBehaviour
     public Vector3 coord2;
     public Vector3 coord3;
     public Vector3 coord4;
+    public GameObject portal;
     private int count_corn_spawn;
     private Vector3[] coords_mas;
     public GameObject enemy;
@@ -43,7 +44,10 @@ public class Enemy_spawner : MonoBehaviour
     {
         vect = new Vector3(coords_mas[i].x, 0.5f, coords_mas[i].z);
         enemies_count_on_corn -= 1;
-        Instantiate(enemy, vect, Quaternion.identity).transform.Rotate(-90, 0, 0);
+        GameObject gb = Instantiate(enemy, vect, Quaternion.identity);
+        gb.transform.Rotate(-90, 0, 0);
+        Path tar = gb.GetComponent<Path>();
+        tar.target = portal;
         if (enemies_count_on_corn != 0)
             Invoke("Spawn_enemie", spawn_time_range);
         else
