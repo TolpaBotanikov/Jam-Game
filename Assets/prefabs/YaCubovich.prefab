@@ -426,7 +426,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c548bca18d8a94ea13653291ebeb53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coor: []
+  coor:
+  - {x: -1, y: 1}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
+  - {x: -1, y: 0}
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: -1, y: -1}
+  - {x: 0, y: -1}
+  - {x: 1, y: -1}
 --- !u!208 &1901788139708209220
 NavMeshObstacle:
   m_ObjectHideFlags: 0
